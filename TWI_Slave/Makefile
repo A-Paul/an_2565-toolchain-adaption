@@ -11,7 +11,7 @@ CFLAGS_DEBUG += -g -DDEBUG
 #CFLAGS += -save-temps
 
 OBJCOPY = avr-objcopy
-RM = rm
+RM = rm -vf --
 
 TARGET = i2c-slave
 OBJECTS = main.o TWI_Slave.o
