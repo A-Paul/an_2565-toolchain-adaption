@@ -108,11 +108,11 @@ int main( void )
 		   }
 		 sleep_cpu();  
       } else {
-          asm("nop");    // There is data in the buffer, code below takes care of it.
+          __asm("nop");    // There is data in the buffer, code below takes care of it.
       }
     #else // No power management
       // Here you can add your own code that should be run while waiting for the TWI to finish    
-      asm("nop");    // Put own code here.
+      __asm("nop");    // Put own code here.
     #endif
       
     
@@ -151,7 +151,7 @@ int main( void )
         }                
         else // Ends up here if the last operation was a transmission  
         {
-              asm("nop");   // Put own code here.
+              __asm("nop");   // Put own code here.
         }
         // Check if the TWI Transceiver has already been started.
         // If not then restart it to prepare it for new receptions.             
@@ -201,7 +201,7 @@ unsigned char TWI_Act_On_Failure_In_Last_Transmission ( unsigned char TWIerrorMs
       temp = PORTB + 1;
       TWI_Start_Transceiver_With_Data(&temp, 1); 
     }
-    asm("nop");   // Do something else while waiting
+    __asm("nop");   // Do something else while waiting
   }
 }
 */
