@@ -66,7 +66,7 @@ unsigned char TWI_Act_On_Failure_In_Last_Transmission ( unsigned char TWIerrorMs
 int main( void )
 {
   unsigned char messageBuf[TWI_BUFFER_SIZE];
-  unsigned char TWI_slaveAddress,temp;
+  unsigned char TWI_slaveAddress;
   
   // LED feedback port - connect port B to the STK600 LEDS
   DDRB  = 0xFF; // Set to output
