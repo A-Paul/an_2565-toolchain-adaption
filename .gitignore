@@ -41,3 +41,8 @@
 *.su
 *.idb
 *.pdb
+
+# global/gtags index files
+GPATH
+GRTAGS
+GTAGS
